@@ -1,8 +1,8 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable } from 'typeorm';
 
-import { Tag } from "./Tag";
+import { Tag } from './Tag';
 
-@Entity()
+@Entity('stories')
 export class Story extends BaseEntity {
   @PrimaryGeneratedColumn()
   readonly id: number;
@@ -16,22 +16,22 @@ export class Story extends BaseEntity {
   @Column()
   author: string;
 
-  @Column('tinytext')
+  @Column('text', { nullable: true })
   description: string;
 
-  @Column('text')
+  @Column('text', { nullable: true })
   introduction: string;
 
-  @Column('longtext')
+  @Column('text')
   text: string;
 
   @Column('date', { default: new Date() })
   date: Date;
 
-  @Column('double', { default: 0 })
+  @Column('real', { default: 0 })
   rating: number;
 
-  @Column('integer', { default: 0 })
+  @Column('int', { default: 0 })
   views: number;
 
   @ManyToMany(type => Tag, tag => tag.stories)

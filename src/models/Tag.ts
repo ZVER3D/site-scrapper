@@ -2,7 +2,7 @@ import { BaseEntity, Entity, PrimaryGeneratedColumn, ManyToMany, Column } from "
 
 import { Story } from "./Story";
 
-@Entity()
+@Entity('tags')
 export class Tag extends BaseEntity {
   @PrimaryGeneratedColumn()
   readonly id: number;
@@ -10,7 +10,7 @@ export class Tag extends BaseEntity {
   @Column()
   name: string;
 
-  @Column("integer", { default: 0 })
+  @Column("int", { default: 0 })
   count: number;
 
   @ManyToMany(type => Story, story => story.tags)

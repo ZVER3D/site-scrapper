@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "lib": [
+      "es2015",
+      "es2016.array.include"
+    ],
+    "resolveJsonModule": true,
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
