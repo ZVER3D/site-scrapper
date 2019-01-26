@@ -1,0 +1,28 @@
+{
+  "name": "site-scrapper",
+  "version": "1.0.0",
+  "description": "Scrapper for an old site that saves data to postgres",
+  "main": "src/index.js",
+  "repository": "https://github.com/ZVER3D/site-scrapper",
+  "author": "ZVER3D",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "pg": "^7.8.0",
+    "reflect-metadata": "^0.1.13",
+    "request-promise": "^4.2.2",
+    "typeorm": "^0.2.12"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/express": "^4.16.1",
+    "@types/request-promise": "^4.1.42",
+    "nodemon": "^1.18.9",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.4"
+  }
+}
