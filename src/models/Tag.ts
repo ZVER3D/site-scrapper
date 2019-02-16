@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, ManyToMany, Column } from "typeorm";
+import { BaseEntity, Entity, PrimaryGeneratedColumn, ManyToMany, Column, Index } from "typeorm";
 
 import { Story } from "./Story";
 
@@ -7,9 +7,11 @@ export class Tag extends BaseEntity {
   @PrimaryGeneratedColumn()
   readonly id: number;
 
+  @Index()
   @Column()
   name: string;
 
+  @Index()
   @Column("int", { default: 0 })
   count: number;
 

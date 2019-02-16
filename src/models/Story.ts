@@ -27,6 +27,7 @@ export class Story extends BaseEntity {
   @Column('text')
   text: string;
 
+  @Index()
   @Column('date', { default: new Date() })
   date: Date;
 
@@ -49,4 +50,8 @@ export class Story extends BaseEntity {
   @ManyToMany(type => Tag, tag => tag.stories)
   @JoinTable()
   tags: Tag[];
+
+  @Index()
+  @Column({ nullable: true })
+  seriesLink: string;
 }
